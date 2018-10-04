@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" 
+          asp-href-include="/lib/bootstrap/dist/css/**/*.min.css"
+          asp-href-exclude="**/*-reboot*,**/*-grid*" 
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+          />
+    <title>SportsStore</title>
+</head>
+<body>
+    <div class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand " href="#">SportsStore</a>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-sm-3" id="categories">
+                Put something useful here later
+            </div>
+            <div class="col-sm-9">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>
