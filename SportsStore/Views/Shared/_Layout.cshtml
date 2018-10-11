@@ -8,18 +8,26 @@
           asp-href-exclude="**/*-reboot*,**/*-grid*" 
           href="~/lib/bootstrap/dist/css/bootstrap.min.css"
           />
+    <link rel="stylesheet" asp-href-include="/lib/fontawesome/css/*.css" />
     <title>SportsStore</title>
 </head>
 <body>
+
     <div class="navbar navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand " href="#">SportsStore</a>
+            <a class="navbar-brand" href="#">Sports Store</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-link">
+                    @await Component.InvokeAsync("CartSummary")
+                </li>
+            </ul>
         </div>
     </div>
+
     <div class="container mt-4">
         <div class="row">
             <div class="col-sm-3" id="categories">
-                Put something useful here later
+                @await  Component.InvokeAsync("NavigationMenu")
             </div>
             <div class="col-sm-9">
                 @RenderBody()
